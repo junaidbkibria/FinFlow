@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar/Navbar";
 import SummaryCards from "./components/SummaryCards";
+import SpendingDonut from "./components/charts/SpendingDonut";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <SummaryCards />
+        <SpendingDonut />
       </div>
     </main>
   );
