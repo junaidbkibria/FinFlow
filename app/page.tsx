@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
-import SummaryCards from "./components/SummaryCards";
+import SummaryCards from "./components/Summary/SummaryCards";
 import SpendingDonut from "./components/charts/SpendingDonut";
 
 export default function Home() {
