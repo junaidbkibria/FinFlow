@@ -2,16 +2,18 @@
 
 import { useState } from "react";
 import { useTransactionFilters } from "./hooks/useTransactionFilters";
+import TransactionTable from "./TransactionTable";
 import AddTransactionModal from "./AddTransactionModal";
+import SuccessModal from "./SuccessModal";
 import { TransactionFormValues } from "./types";
 import { useTransactionStore } from "@/app/store/TransactionStore";
 import { Transaction } from "@/app/types/transaction";
 import TableFilters from "./TableFilter";
-import TransactionTable from "./TransactionTable";
 
 export default function TransactionList() {
   const { transactions, addTransaction } = useTransactionStore();
   const [modalOpen, setModalOpen] = useState(false);
+  const [successOpen, setSuccessOpen] = useState(false);
 
   const { filters, filtered, setSearch, setCategory, setStatus, resetFilters } =
     useTransactionFilters(transactions);
@@ -24,6 +26,7 @@ export default function TransactionList() {
     };
     addTransaction(newTransaction);
     setModalOpen(false);
+    setSuccessOpen(true);
   };
 
   return (
@@ -56,6 +59,8 @@ export default function TransactionList() {
         onClose={() => setModalOpen(false)}
         onSubmit={handleAdd}
       />
+
+      <SuccessModal open={successOpen} onClose={() => setSuccessOpen(false)} />
     </div>
   );
 }

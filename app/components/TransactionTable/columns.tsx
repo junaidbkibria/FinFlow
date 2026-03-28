@@ -36,7 +36,7 @@ export function getColumns(): TableColumnsType<Transaction> {
           {cat}
         </span>
       ),
-      responsive: ["sm"] as ("sm" | "md" | "lg" | "xl" | "xxl")[],
+      //   responsive: ["sm"] as ("sm" | "md" | "lg" | "xl" | "xxl")[],
     },
     {
       title: "Amount",
@@ -77,7 +77,7 @@ export function getColumns(): TableColumnsType<Transaction> {
           </span>
         );
       },
-      responsive: ["md"] as ("sm" | "md" | "lg" | "xl" | "xxl")[],
+      //   responsive: ["md"] as ("sm" | "md" | "lg" | "xl" | "xxl")[],
     },
   ];
 }
