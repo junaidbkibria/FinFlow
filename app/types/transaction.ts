@@ -1,6 +1,6 @@
 export type TransactionType = "income" | "expense";
 
-export type TransactionStatus = "completed" | "pending";
+export type TransactionStatus = "completed" | "pending" | "failed";
 
 export type TransactionCategory =
   | "Food"

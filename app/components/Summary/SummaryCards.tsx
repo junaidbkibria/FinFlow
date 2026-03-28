@@ -1,8 +1,12 @@
 "use client";
 
-import { selectBalance, selectExpense, selectIncome } from "../store/Selectors";
-import { useTransactionStore } from "../store/TransactionStore";
-import SummaryCard from "./Summary/SummaryCard";
+import {
+  selectBalance,
+  selectExpense,
+  selectIncome,
+} from "../../store/Selectors";
+import { useTransactionStore } from "../../store/TransactionStore";
+import SummaryCard from "./SummaryCard";
 
 export default function SummaryCards() {
   const transactions = useTransactionStore((s) => s.transactions);
