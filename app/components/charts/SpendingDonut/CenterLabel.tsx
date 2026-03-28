@@ -49,7 +49,6 @@ export default function CenterLabel({
           style={{
             fontSize: 15,
             fontWeight: 700,
-            color: "#1e293b",
             lineHeight: 1.2,
             whiteSpace: "nowrap",
             marginLeft: "80px",
